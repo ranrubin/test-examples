@@ -1,10 +1,17 @@
-from src.wallet import Wallet
+import pytest
+from src.wallet import Wallet, InsufficientAmount
 
 """
     This would be our first action. 
     Wallet object does not yet exist, but we refer to it as if it is
     Notice that the function's signatures are very explicit 
 """
+
+
+def test_wallet_spend_cash_raises_exception_on_insufficient_amount():
+    wallet = Wallet()
+    with pytest.raises(InsufficientAmount):
+        wallet.spend_cash(100)
 
 
 def test_default_initial_amount():
