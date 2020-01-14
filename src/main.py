@@ -1,7 +1,7 @@
-
+from src.wallet import Wallet
 
 def main():
-    print("Ran")
+    wallet = Wallet(70)
 
 if __name__ == '__main__':
     main()
