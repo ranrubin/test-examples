@@ -1,5 +1,5 @@
 
 class Wallet:
     """
-    This object represent a wallet
+    This object represents a wallet
     """
