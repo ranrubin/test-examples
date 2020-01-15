@@ -14,12 +14,12 @@ def test_wallet_spend_cash_raises_exception_on_insufficient_amount():
         wallet.spend_cash(100)
 
 
-def test_setting_wrong_type_raises_exception_on_type():
-    """
-        Asserts exception is raised when wrong input type is given
-    """
-    with pytest.raises(TypeError):
-        wallet = Wallet("not int")
+# def test_setting_wrong_type_raises_exception_on_type():
+#     """
+#         Asserts exception is raised when wrong input type is given
+#     """
+#     with pytest.raises(TypeError):
+#         wallet = Wallet("not int")
 
 
 def test_default_initial_amount():
