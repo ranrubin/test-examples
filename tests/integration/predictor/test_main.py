@@ -9,7 +9,7 @@ import os
     ("cuda:0", 8, False),
 ])
 def test_model_run(device, batch, load_to_ram):
-    main_path = "~/PycharmProjects/test-examples/src/predictor/main.py"
+    main_path = "/src/predictor/main.py"
     command = "python " + main_path + " -device " + device + " -batch " + str(batch)
     if load_to_ram:
         command = command + " --load_to_ram"
