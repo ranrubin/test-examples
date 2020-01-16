@@ -1,6 +1,9 @@
-
+# src/wallet.py
 
 class InsufficientAmount(Exception):
+    """
+    This exception will be raised when attempting to spend more money than balance
+    """
     pass
 
 
@@ -10,8 +13,7 @@ class Wallet(object):
     """
 
     def __init__(self, initial_amount=0):
-        # if not isinstance(initial_amount, int) and not isinstance(initial_amount, float):
-        #     raise TypeError('Should get int or float argument')
+        """ constructor"""
         self.balance = initial_amount
 
     def spend_cash(self, amount):
@@ -31,3 +33,8 @@ class Wallet(object):
         """
         self.balance += amount
 
+
+
+
+        # if not isinstance(initial_amount, int) and not isinstance(initial_amount, float):
+        #     raise TypeError('Should get int or float argument')
