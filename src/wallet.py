@@ -14,6 +14,8 @@ class Wallet(object):
 
     def __init__(self, initial_amount=0):
         """ constructor"""
+        if not isinstance(initial_amount, int) and not isinstance(initial_amount, float):
+            raise TypeError('Should get int or float argument')
         self.balance = initial_amount
 
     def spend_cash(self, amount):
@@ -36,5 +38,3 @@ class Wallet(object):
 
 
 
-        # if not isinstance(initial_amount, int) and not isinstance(initial_amount, float):
-        #     raise TypeError('Should get int or float argument')
